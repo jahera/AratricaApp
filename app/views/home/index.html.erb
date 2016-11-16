@@ -1,0 +1,84 @@
+
+    <!--start-->
+    <div style="width:1000px;margin-left: 80px;">
+        <div id="ninja-slider" style="float:left;">
+            <div class="slider-inner">
+                <ul>
+                    <li><a class="ns-img" href="assets/1.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/2.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/3.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/4.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/5.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/6.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/7.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/8.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/9.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/10.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/11.jpg"></a></li>
+                    <li><a class="ns-img" href="assets/12.jpg"></a></li>
+                </ul>
+                <div class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+        <div id="thumbnail-slider" style="float:left;">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a class="thumb" href="assets/1.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/2.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/3.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/4.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/5.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/6.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/7.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/8.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/9.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/10.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/11.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="assets/12.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>&nbsp;
+ <div class="main">
+  <div class="featured_content" id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+        <% @images.each do |image| %>
+          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="<%= details_home_index_path(:category=>image.category) %>">
+              <%#= image_tag(image.file_url(:thumb)) if image.present? %>
+              <!--<img class="img-responsive" src="http://placehold.it/400x300" alt="">-->
+            </a>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
