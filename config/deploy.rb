@@ -1,14 +1,14 @@
 # config valid only for Capisano 3.1
 lock '3.6.1'
 set :stage, :staging
-set :application, 'InteriorApp'
-set :repo_url, 'git@github.com:jahera/InteriorApp.git'
+set :application, 'AratricaApp'
+set :repo_url, 'git@github.com:jahera/AratricaApp.git'
 
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
-set :root_path, '/home/3dcreative/rails_app'
+set :root_path, '/home/3daratrica/rails_app'
 set :deploy_to, "#{fetch(:root_path)}/#{fetch(:application)}"
 set :current_path, "#{fetch(:deploy_to)}/current"
 
@@ -29,6 +29,7 @@ set :pty, true
 
 # Default value for :linked_files is []
 #set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/initializers/s3.rb}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system }
